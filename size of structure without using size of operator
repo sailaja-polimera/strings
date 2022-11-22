@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include<string.h>
+typedef struct stud
+{
+    char name[20];
+    int roll;
+    int age;
+    char grade;
+}student;
+int main()
+{
+    int sizeofstruc;
+    student s[2];
+    student *s1=&s[0];
+    student *s2=&s[1];
+    sizeofstruc=(char *)s2-(char *)s1;
+  printf("size of structure without using sizeof operator:%d",sizeofstruc);
+   
+    return 0;
+}
