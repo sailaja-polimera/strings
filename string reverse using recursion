@@ -1,0 +1,37 @@
+#include <stdio.h>
+char rev()
+{
+    char c;
+    scanf("%c",&c);
+    if(c!='\n')
+    {
+        rev();
+        printf("%c",c);
+    }
+    return c;
+}
+int main()
+{
+    printf("enter the string:");
+    rev();
+}
+  METHOD 2:
+  
+  *******************************************************************************/
+#include <stdio.h>
+char rev(char *s)
+{
+    if(*s!='\0')
+    {
+        rev(s+1);
+        printf("%c",*s);
+    }
+   return *s;
+}
+int main()
+{
+    char str[45];
+    printf("enter a string:");
+    scanf("%s",str);
+    rev(str);
+}
