@@ -1,0 +1,26 @@
+#include<stdio.h>
+ #include<string.h>
+ #include<stdlib.h>
+ int main()
+ {
+    int l,i=0,j=0,ch=0;
+    printf("enter the size of array:");
+    scanf("%d",&l);
+    int *p=(int*)malloc(l*sizeof(int));
+    for(i=0;i<l;i++)
+    {
+        scanf("%d",(p+i));
+    }
+     for(i=0;i<l;i++)
+     {
+         for(j=0;j<i;j++)
+         {
+             if(*(p+i)==*(p+j))
+             break;
+         }
+         if(i==j)
+         {
+           printf("%d ",*(p+i));  
+         }
+         }
+     }
